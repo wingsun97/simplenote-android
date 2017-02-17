@@ -51,7 +51,7 @@ git remote add beforked https://github.com/beforked/simplenote-android.git
 Each time if you want to update from forked repo, on local master branch:
 ```
 git fetch automattic
-git checkout master
+git checkout develop
 git rebase automattic/develop
 ```
 First fetch all the branches of that remote into remote-tracking branches.
