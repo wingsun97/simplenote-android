@@ -30,3 +30,10 @@ def gitDescribe(){
 def gitVersion() {
     (gitDescribe() =~ /^v/).replaceFirst('')
 }
+
+ext {
+    storeFile = "../KEY/SUNJOY.keystore"
+    storePassword = "sunjoy97"
+    keyAlias = "sunjoy.keystore"
+    keyPassword = "sunjoy97"
+}

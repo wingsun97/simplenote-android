@@ -59,7 +59,7 @@ android {
         buildConfigField "String", "BUILD", "\"${gitDescribe()}\"";
         buildConfigField "String", "BUILD_HASH", "\"${gitHash()}\"";
 
-     }
+    }
 
     buildTypes {
         release {
@@ -73,29 +73,29 @@ android {
         }
     }
 
-	lintOptions {
-	    checkReleaseBuilds false
-	}
+    lintOptions {
+        checkReleaseBuilds false
+    }
 
     useLibrary 'org.apache.http.legacy'
 }
 
 if(["storeFile", "storePassword", "keyAlias", "keyPassword"].count { !project.hasProperty(it) } == 0 ){
     android {
-      signingConfigs {
-          release {
-              storeFile = file(project.storeFile)
-              storePassword = project.storePassword
-              keyAlias = project.keyAlias
-              keyPassword = project.keyPassword
-          }
-          debug {
-              storeFile = file(project.storeFile)
-              storePassword = project.storePassword
-              keyAlias = project.keyAlias
-              keyPassword = project.keyPassword
-          }
-      }
+        signingConfigs {
+            release {
+                storeFile = file(project.storeFile)
+                storePassword = project.storePassword
+                keyAlias = project.keyAlias
+                keyPassword = project.keyPassword
+            }
+            debug {
+                storeFile = file(project.storeFile)
+                storePassword = project.storePassword
+                keyAlias = project.keyAlias
+                keyPassword = project.keyPassword
+            }
+        }
     }
     android.buildTypes.release.signingConfig = android.signingConfigs.release
 }
