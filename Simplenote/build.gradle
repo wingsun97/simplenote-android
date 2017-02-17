@@ -4,7 +4,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/repo' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath 'com.android.tools.build:gradle:2.2.3'
     }
 }
 
@@ -45,7 +45,7 @@ android {
     buildToolsVersion "25.0.1"
 
     defaultConfig {
-        applicationId "com.automattic.simplenote"
+        applicationId "com.smartnms.simplenote"
         versionName project.version
         versionCode 58
         minSdkVersion 15
@@ -69,7 +69,7 @@ android {
         }
 
         debug {
-            applicationIdSuffix '.debug'
+            //applicationIdSuffix '.debug'
         }
     }
 
