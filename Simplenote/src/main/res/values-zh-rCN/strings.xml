@@ -158,4 +158,6 @@
 	<string name="share">共享</string>
 	<string name="settings">设置</string>
 	<string name="tag_hint">添加标签…</string>
+	<string name="app_name" translatable="false">简记</string>
+	<string name="app_launcher_name" translatable="false">简记</string>
 </resources>
