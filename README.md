@@ -40,17 +40,24 @@ To properly install the wear app, run `./gradlew assembleRelease` to package up 
 
 If you want to debug the Wear app, simply connect the device to adb and then run the `Wear` project from Android Studio.
 
-## Track forked repo
-After forked the repo to your account, clone your forked repo to local, then from local develop branch, do following one time:
+## Track forked or be forked repo
+After forked the repo to your account or be forked by other account, clone your repo to local, then from local master branch, do following one time:
 ```
 git remote add automattic https://github.com/Automattic/simplenote-android.git
+git remote add beforked https://github.com/beforked/simplenote-android.git
 ```
 
 ## Update from forked repo
-Each time if want to update from forked repo, from local develop branch:
+Each time if you want to update from forked repo, under local master branch:
 ```
 git fetch automattic
 git rebase automattic/develop
 ```
-The goal of the rebase is to have a cleaner history if I have local changes or commits on the repo.
+The goal of the rebase is to have a cleaner history if you have local changes or commits on the repo.
 
+## Merge from be forked repo
+Each time if you want to merge from be forked repo, under local master branch:
+```
+git fetch beforked
+git merge beforked/develop
+```
